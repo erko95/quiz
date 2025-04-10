@@ -43,7 +43,7 @@ export function Question({ question, answer }: Props) {
       {showConfirm && (
         <Confirmation
           message="Are you sure you want to reveal the answer?"
-          type="caution"
+          type="message"
           accept={handleAccept}
           decline={handleDecline}
         />
