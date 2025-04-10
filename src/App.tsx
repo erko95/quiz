@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import { QuestionList } from "./components/4_QuestionList";
+
+import "./styles.scss";
+
+export const questions = [
+  {
+    id: 0,
+    question: "What are the first 10 digits of PI?",
+    answer: "3.141592653",
+  },
+  {
+    id: 1,
+    question:
+      "What is the average the airspeed velocity of a (European) unladen swallow?",
+    answer: "11 meters per second",
+  },
+  {
+    id: 2,
+    question: "What is the answer to life the universe and everything?",
+    answer: "42",
+  },
+];
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="container">
+        <div className="forsta-logo" />
+        <QuestionList questions={questions} />
+      </div>
     </div>
   );
 }
-
-export default App;
